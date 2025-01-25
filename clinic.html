@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.N.T. Clinic - Sahi Pakde Hain</title>
+    <link rel="icon" href="logo-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="clinic.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        #home{
+            .home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3f2fd;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.home-text {
+    flex: 1;
+    padding: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+.home-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.home-text h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.home-text p {
+    font-size: 1.2em;
+}
+
+.cta {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #d32f2f;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cta:hover {
+    color: #b71c1c;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 300px; /* Added perspective for 3D effect */
+
+    
+}
+.home-image:hover{
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+}
+
+.home-image img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.home-image img:hover {
+    transform: rotateY(30deg); /* 3D rotation on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-image {
+        margin-top: 20px;
+    }
+
+    .home-text h2 {
+        font-size: 2em;
+    }
+
+    .home-text p {
+        font-size: 1em;
+    }
+}
+
+        }
+#facility{
+    main {
+    padding: 20px;
+}
+
+#facilities {
+    margin: 20px 0;
+}
+
+.facility-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.facility {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    width: calc(33.333% - 30px); /* 3 items per row */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facility img {
+    width: 100%;
+    height: auto;
+}
+
+.facility h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.facility p {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+
+.facility:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .facility {
+        width: calc(50% - 30px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .facility {
+        width: 100%; /* 1 item per row */
+    }
+}
+}
+#award{
+    main {
+    padding: 20px;
+}
+
+#awards {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.awards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.award-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 300px;
+    position: relative; /* Added for pseudo-element */
+    overflow: hidden; /* Prevent overflow for pseudo-element */
+}
+
+.award-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.award-image:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+}
+
+.award-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.award-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade effect */
+}
+
+.award-item:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .awards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .award-item {
+        width: 90%;
+    }
+}
+
+}
+#patient{
+    nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+}
+
+#patients {
+    margin: 20px 0;
+}
+
+.patient-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.patient {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    width: calc(48% - 30px); /* 2 items per row */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.patient img {
+    width: 100%;
+    height: auto;
+}
+
+.patient h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.patient p {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+
+.patient:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .patient {
+        width: calc(100% - 30px); /* 1 item per row */
+    }
+}
+}
+#contacts{
+    main {
+    padding: 20px;
+}
+
+#contact {
+    margin: 20px 0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.info {
+    width: 45%;
+}
+
+.contact-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-image:hover {
+    transform: scale(1.05);
+}
+
+.map {
+    width: 45%;
+}
+
+.map iframe {
+    border-radius: 8px;
+}
+
+.contact-form {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form h3 {
+    margin: 0 0 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #004f85;
+}
+
+.contact-form button {
+    background-color: #004f85;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #003366;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .info, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+}
+#payment{
+    main {
+    padding: 20px;
+}
+
+#payments {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.payment-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-method {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 250px;
+    position: relative;
+}
+
+.payment-icon {
+    width: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.payment-method:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.payment-method:hover .payment-icon {
+    transform: scale(1.1);
+}
+
+.payment-gateway {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gateway-logo {
+    width: 200px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment-method {
+        width: 90%;
+    }
+}
+}
+#new{
+    main {
+    padding: 20px;
+}
+
+#news {
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .slide-content {
+        font-size: 14px;
+    }
+}
+}
+#money{
+    main {
+    padding: 20px;
+}
+
+#make-money {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#make-money h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.ideas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.idea {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.idea:hover {
+    transform: translateY(-10px);
+}
+
+.idea-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.idea h3 {
+    margin: 15px 0 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .ideas {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.clinic-section {
+    padding: 60px 20px;
+    background-color: #f5f9ff;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.clinic-header {
+    margin-bottom: 40px;
+}
+
+.clinic-header h1 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.clinic-header h1:hover {
+    color: #0056b3;
+}
+
+.clinic-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.clinic-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(30% - 40px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.clinic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.clinic-item h2 {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.clinic-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    
+}
+
+.clinic-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.clinic-image:hover {
+    transform: scale(1.05);
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.map-link:hover {
+    background-color: #003366;
+}
+
+.clinic-video {
+    margin-top: 40px;
+}
+
+.clinic-video video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.clinic-cta {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: white;
+    background-color: #0056b3;
+    height: 50px;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .clinic-item {
+        width: calc(100% - 40px);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+#ent-clinics{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ent-clinics-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.clinics-header {
+    margin-bottom: 40px;
+}
+
+.clinics-header h1 {
+    font-size: 2.5em;
+    color: #0056b3;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.clinics-header h1:hover {
+    color: #003366;
+}
+
+.clinics-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.clinic-item {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.clinic-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.clinic-item h2 {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin: 10px 0;
+    
+}
+
+.clinic-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .clinic-item {
+        width: calc(100% - 40px);
+    }
+}
+
+
+.footer-section{
+    .footer-section {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-in;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideIn 0.5s forwards;
+}
+
+.footer-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffc107;
+    transition: color 0.3s;
+}
+
+.footer-content h2:hover {
+    color: #ffca2c;
+}
+
+.footer-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+}
+
+.call-icon {
+    z-index: 1;
+    /* display: flex; */
+    position: fixed;
+    align-items: center;
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.call-icon span {
+    font-weight: bold; /* Bold text */
+}
+#id1{
+    width: 100%;
+    margin-left: -20px;
+    margin-bottom: -28px;
+    margin-top: -15px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo-removebg-preview.png" alt="E.N.T. - Sahi Pakde Hain Logo">
+            <h1>E.N.T. - सही पकड़े हैं</h1>
+            <h2>Gold Medal, AGRA - India</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facility">Facilities</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#patients">Patients</a></li>
+                <li><a href="#money">Make Money With Us</a></li>
+                <li><a href="#surgeons">ENT Surgeons</a></li>
+                <li><a href="#pgsr">ENT PG/SR</a></li>
+                <li><a href="#payments">Payments</a></li>
+                <li><a href="#news">News 4 U</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <img id="id1" src="bb30ef8eb206b0d7cc95.svg" alt="">
+        </nav>
+    </header>
+    <div class="call-us">
+        <a href="tel:+91 8923746338" class="call-icon">
+            <span>Call Us</span>
+        </a>
+    </div>
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <div class="home-text">
+                    <h2>Welcome to E.N.T. Clinic</h2>
+                    <p>Your destination for final diagnosis, treatment, and surgery for E.N.T. diseases.</p>
+                    <h3>Dr. Hemant Ahluwalia</h3>
+                    <p>M.S.(ENT), FAAS (France)</p>
+                    <p class="cta">
+                        Book Appointment for Consultation Now! 
+                        <strong>Call/WhatsApp: 8923746338</strong>
+                    </p>
+                </div>
+                <div class="home-image">
+                    <img src="logo-removebg-preview.png" alt="E.N.T. Logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="clinics" class="clinic-section">
+            <div class="clinic-header">
+                <h1>Our Clinics</h1>
+                <p>Providing the best E.N.T. care across various locations.</p>
+            </div>
+            <div class="clinic-list">
+                <div class="clinic-item">
+                    <img src="cl1.jpeg" alt="Agra Clinic" class="clinic-image">
+                    <h2>Agra</h2>
+                    <p><strong>Address:</strong> 140, Defence Estate-1, Madhu Nagar Chauraha, Devri Road, Agra</p>
+                    <p><strong>Hours:</strong> Mon-Sat 7 AM - 10 AM & 5 PM - 9 PM; Sun 8 AM - 8 PM</p>
+                    <a href="https://www.google.com/maps/place/Agra" target="_blank" class="map-link">View on Map</a>
+                </div>
+                <div class="clinic-item">
+                    <img src="cl2.jpeg" alt="Etawah Clinic" class="clinic-image">
+                    <h2>Etawah</h2>
+                    <p><strong>Address:</strong> I.T.I. Chauraha, Shiv Medical, Etawah</p>
+                    <p><strong>Hours:</strong> Tuesday 11:30 AM - 4 PM</p>
+                    <a href="https://www.google.com/maps/place/Etawah" target="_blank" class="map-link">View on Map</a>
+                </div>
+                <div class="clinic-item">
+                    <img src="cl3.jpeg" alt="Firozabad Clinic" class="clinic-image">
+                    <h2>Firozabad</h2>
+                    <p><strong>Address:</strong> Shuhag Nagar, Near L.I.C. Office & Sanjay Medical, Firozabad</p>
+                    <p><strong>Hours:</strong> Mon-Sat 10:30 AM - 4 PM</p>
+                    <a href="https://www.google.com/maps/place/Firozabad" target="_blank" class="map-link">View on Map</a>
+                </div>
+                
+            </div>
+            
+            <div class="clinic-cta">
+                <p style="padding-top: 15px;">Visit your nearest clinic to book an appointment today!</p>
+            </div>
+        </section>
+        
+
+<section id="facility">
+    <main>
+        <section id="Facilities">
+            <h2>Our Facilities</h2>
+            <div class="facility-grid">
+                <div class="facility">
+                    <img src="1.jpeg" alt="Endoscopic Sinus Surgery">
+                    <h3>Endoscopic Sinus Surgery</h3>
+                    <p>Advanced techniques for effective sinus treatment.</p>
+                </div>
+                <div class="facility">
+                    <img src="2.jpeg" alt="Micro Ear Surgery">
+                    <h3>Micro-Ear Surgery</h3>
+                    <p>Precision surgery for hearing restoration.</p>
+                </div>
+                <div class="facility">
+                    <img src="3.jpeg" alt="Small Incision Surgery">
+                    <h3>Small Incision Surgery</h3>
+                    <p>Less invasive surgeries for faster recovery.</p>
+                </div>
+                <div class="facility">
+                    <img src="4.jpeg" alt="Head Neck Surgery">
+                    <h3>Head-Neck Surgery</h3>
+                    <p>Comprehensive care for complex conditions.</p>
+                </div>
+                <div class="facility">
+                    <img src="5.jpeg" alt="Cosmetic Rhinoplasty">
+                    <h3>Cosmetic Rhinoplasty</h3>
+                    <p>Enhancing aesthetics while maintaining functionality.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    </section>
+
+
+        <section id="award">
+            <main>
+                <section id="awards">
+                    <h2>Awards & Recognitions</h2>
+                    <div class="awards-container">
+                        <div class="award-item">
+                            <img src="award.jpeg" alt="Dr. R.A.F. Cooper National ENT Award" class="award-image">
+                            <h3>Dr. R.A.F. Cooper National ENT Awardee</h3>
+                            <p>A recognition for outstanding contribution to the field of Otorhinolaryngology.</p>
+                        </div>
+                        <div class="award-item">
+                            <img src="award.jpeg" alt="AOI E. Merck National ENT Award" class="award-image">
+                            <h3>AOI E. Merck National ENT Awardee</h3>
+                            <p>A prestigious award for excellence in clinical practice and research.</p>
+                        </div>
+                        <div class="award-item">
+                            <img src="award.jpeg" alt="International Fellowship Awards" class="award-image">
+                            <h3>International Fellowship Awards</h3>
+                            <p>Fellowships from various prestigious institutions across the globe.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+
+
+        <section id="patient">
+            <main>
+        <section id="patients">
+            <h2>Patients</h2>
+            <div class="patient-info">
+                <div class="patient">
+                    <img src="c1.jpeg" alt="Patient Consultation">
+                    <h3>Consultation Services</h3>
+                    <p>We provide thorough consultations to understand your ENT issues.</p>
+                </div>
+                <div class="patient">
+                    <img src="c2.jpeg" alt="Second Opinion">
+                    <h3>Second Opinion</h3>
+                    <p>If you need a second opinion, we're here to help you make informed decisions.</p>
+                </div>
+                <div class="patient">
+                    <img src="c3.jpeg" alt="Online Consultations">
+                    <h3>Online Consultations</h3>
+                    <p>Access our services from the comfort of your home through video consultations.</p>
+                </div>
+                <div class="patient">
+                    <img src="c4.jpg" alt="International Patients">
+                    <h3>International Patients</h3>
+                    <p>We welcome patients from around the world for specialized ENT care.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        </section>
+
+        <section id="money">
+            <main>
+                <section id="make-money">
+                    <h2>Make Money With Us</h2>
+                    <div class="content">
+                        <p>Join our affiliate program and earn commissions for every referral you make. With our high-quality services and established reputation, you can be sure your referrals are in good hands.</p>
+                        <div class="ideas">
+                            <div class="idea">
+                                <img src="affiliate.png" alt="Affiliate Marketing" class="idea-img">
+                                <h3>Affiliate Marketing</h3>
+                                <p>Promote our services and earn a commission on each successful referral. It’s simple and rewarding!</p>
+                            </div>
+                            <div class="idea">
+                                <img src="consultation.png" alt="Consultation Services" class="idea-img">
+                                <h3>Consultation Services</h3>
+                                <p>Offer online consultations and receive a percentage of the earnings. Help patients while earning money!</p>
+                            </div>
+                            <div class="idea">
+                                <img src="workshop.png" alt="Workshops" class="idea-img">
+                                <h3>Organize Workshops</h3>
+                                <p>Conduct workshops or seminars related to ENT health and earn for every attendee. Share knowledge and earn!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <section id="surgeons">
+            <h2>ENT Surgeons</h2>
+            <p>Meet our dedicated team of experts.</p>
+        </section>
+
+        <section id="pgsr">
+            <h2>ENT PG/SR</h2>
+            <p>For E.N.T. Postgraduates!</p>
+        </section>
+
+        <section id="payment">
+            <main>
+                <section id="payments">
+                    <h2>Payment Methods</h2>
+                    <div class="payment-container">
+                        <div class="payment-method">
+                            <img src="cr1.jpeg" alt="Credit Card" class="payment-icon">
+                            <h3>Credit/Debit Card</h3>
+                            <p>Pay using Visa, MasterCard, or any major credit card.</p>
+                        </div>
+                        <div class="payment-method">
+                            <img src="cr2.jpeg" alt="PayPal" class="payment-icon">
+                            <h3>PayPal</h3>
+                            <p>Secure online payments through PayPal.</p>
+                        </div>
+                        <div class="payment-method">
+                            <img src="cr3.png" alt="UPI" class="payment-icon">
+                            <h3>UPI</h3>
+                            <p>Instant payments through UPI apps.</p>
+                        </div>
+                        <div class="payment-method">
+                            <img src="cr4.jpeg" alt="Bank Transfer" class="payment-icon">
+                            <h3>Bank Transfer</h3>
+                            <p>Direct bank transfers for payments.</p>
+                        </div>
+                    </div>
+                    <div class="payment-gateway">
+                        <h2>Payment Gateway</h2>
+                        <p>We use a secure payment gateway for all transactions. Your payment information is kept safe and confidential.</p>
+                        <img src="cr5.jpeg" alt="Payment Gateway Logo" class="gateway-logo">
+                    </div>
+                </section>
+            </main>
+        
+        </section>
+
+        <section id="new">
+            <main>
+                <section id="news">
+                    <h2>Latest News & Updates</h2>
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide active">
+                                <img src="n1.jpeg" alt="News Image 1">
+                                <div class="slide-content">
+                                    <h3>New Advances in ENT Treatments</h3>
+                                    <p>Discover the latest advancements in the treatment of ENT diseases, enhancing patient care and outcomes.</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="n2.jpeg" alt="News Image 2">
+                                <div class="slide-content">
+                                    <h3>Free ENT Camp in Agra</h3>
+                                    <p>Join us for a free ENT health camp on 25th December. Open to all residents of Agra.</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="n3.jpeg" alt="News Image 3">
+                                <div class="slide-content">
+                                    <h3>Webinar on Hearing Disorders</h3>
+                                    <p>Attend our upcoming webinar to learn about the latest strategies in managing hearing disorders.</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="n4.jpeg" alt="News Image 4">
+                                <div class="slide-content">
+                                    <h3>Patient Success Stories</h3>
+                                    <p>Read inspiring stories of patients who have successfully overcome their ENT issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                </section>
+            </main>
+        
+            <script>
+                let slideIndex = 0;
+                showSlides();
+        
+                function showSlides() {
+                    const slides = document.getElementsByClassName("slide");
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    slides[slideIndex - 1].style.display = "block";  
+                    setTimeout(showSlides, 3000); // Change image every 3 seconds
+                }
+        
+                function changeSlide(n) {
+                    slideIndex += n;
+                    const slides = document.getElementsByClassName("slide");
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    if (slideIndex < 1) {slideIndex = slides.length}
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex - 1].style.display = "block";  
+                }
+            </script>
+        </section>
+
+        <section id="contacts">
+            <main>
+                <section id="contact">
+                    <h2>Contact Us</h2>
+                    <div class="contact-info">
+                        <div class="info">
+                            <h3>Get in Touch</h3>
+                            <img src="contact us.jpeg" alt="Contact Us" class="contact-image">
+                            <p>If you have any questions or would like to make an appointment, please contact us!</p>
+                            <ul>
+                                <li><strong>Phone:</strong> 8923746338</li>
+                                <li><strong>Email:</strong> contact@entclinic.com</li>
+                                <li><strong>Address:</strong> 140, Defence Estate-1, Madhu Nagar Chauraha, Devri Road, Agra</li>
+                            </ul>
+                        </div>
+                        <div class="map">
+                            <h3>Our Location</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151402.0316951844!2d78.85322077588913!3d27.176643316685726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a1e7d2f28c9c5%3A0xa0b785c646e6f1ae!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1640287747930!5m2!1sen!2sin" 
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+        
+                    <form class="contact-form">
+                        <h3>Contact Form</h3>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+            </main>
+
+            
+            <section id="ent-clinics" class="ent-clinics-section">
+                <div class="clinics-header">
+                    <h1>E.N.T. Clinics</h1>
+                    <p style="color: white;">Find the nearest clinic for your consultation.</p>
+                </div>
+                <div class="clinics-list">
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/agra-clinic.jpg" alt="Agra Clinic"> -->
+                        <h2>Agra</h2>
+                        <p>140, Defence Estate-1, Madhu Nagar Chauraha, Devri Road, Agra</p>
+                        <p>Monday to Saturday: 7 AM - 10 AM, 5 PM - 9 PM | Sunday: 8 AM - 8 PM</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/etawah-clinic.jpg" alt="Etawah Clinic"> -->
+                        <h2>Etawah</h2>
+                        <p>I.T.I. Chauraha, Shiv Medical, Etawah</p>
+                        <p>Tuesday: 11:30 AM - 4 PM</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/firozabad-clinic.jpg" alt="Firozabad Clinic"> -->
+                        <h2>Firozabad</h2>
+                        <p>Shuhag Nagar, Near L.I.C. Office & Sanjay Medical, Firozabad</p>
+                        <p>Monday to Saturday: 10:30 AM - 4 PM</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/gwalior-clinic.jpg" alt="Gwalior Clinic"> -->
+                        <h2>Gwalior</h2>
+                        <p>Details to be added</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/etah-clinic.jpg" alt="Etah Clinic"> -->
+                        <h2>Etah</h2>
+                        <p>Details to be added</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/dholpur-clinic.jpg" alt="Dholpur Clinic"> -->
+                        <h2>Dholpur</h2>
+                        <p>Details to be added</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/morena-clinic.jpg" alt="Morena Clinic"> -->
+                        <h2>Morena</h2>
+                        <p>Details to be added</p>
+                    </div>
+                    <div class="clinic-item">
+                        <!-- <img src="path/to/prayagraj-clinic.jpg" alt="Prayagraj Clinic"> -->
+                        <h2>Prayagraj</h2>
+                        <p>Details to be added</p>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="doctors">
+                <h2>Our Esteemed Doctors</h2>
+                <p>Dr. Arunabh, Dr. Ankit Dubey, Dr. Naveen Verma, Dr. Prem N. Jaiswal, Dr. Arpit Saxena,</p>
+                <p>Dr. Santosh Kr. Dubey, Dr. Mahendra Saroj, Dr. Jaypal Singh, Dr. Sunil Bhadouriya,</p>
+                <p>Dr. Bhartendu, Dr. Shashank, Dr. Abhishek, Ms. Asha, Mr. Ajay, Mr. Rizwan M.</p>
+            </div>
+            <div class="dedication">
+                <h2>Dedication</h2>
+                <p>This ENT milestone is dedicated to the memory of my dearest ENT friend Dr. Manoj Chaturvedi, a pious selfless noble soul.</p>
+                <p>With blessings from my mother & father.</p>
+            </div>
+            <div class="viewer-info">
+                <h2>Total Viewers</h2>
+                <p>Total no. of Viewer & Country breakup with No.</p>
+            </div>
+            <div class="trademark">
+                <p>E.N.T. - Sahi pakde hain is a trademark of Hemant Ahluwalia, India.</p>
+                <p>Copyright &copy; 2024 Hemant Ahluwalia. All Rights Reserved.</p>
+                <img id="id1" src="bb30ef8eb206b0d7cc95.svg" alt="">
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

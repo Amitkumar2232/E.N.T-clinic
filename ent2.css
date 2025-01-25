@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3f2fd;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-text {
+    flex: 1;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.home-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.home-text h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.home-text p {
+    font-size: 1.2em;
+}
+
+.cta {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #d32f2f;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cta:hover {
+    color: #b71c1c;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.home-image img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.home-image img:hover {
+    transform: rotateY(20deg);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-image {
+        margin-top: 20px;
+    }
+
+    .home-text h2 {
+        font-size: 2em;
+    }
+
+    .home-text p {
+        font-size: 1em;
+    }
+}
